@@ -1,10 +1,10 @@
 async function getData(url) {
-  const response = await fetch(url);
-  if (!response.ok) {
-    const message = `An error has occured: ${response.status}`;
-    throw new Error(message);
+  try {
+    const response = await fetch(url);
+    return await response.json();
+  } catch (error) {
+    return error;
   }
-  return await response.json();
 }
 
 // load content based on current active tab
