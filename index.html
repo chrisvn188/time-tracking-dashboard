@@ -10,7 +10,117 @@
       href="./images/favicon-32x32.png"
     />
     <title>Frontend Mentor | Time tracking dashboard</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <main class="main">
+      <!-- this heading is invisible for end users -->
+      <!-- for accessibility purposes, available for screen readers only-->
+      <h1 class="visually-hidden">Time tracking dashboard</h1>
+
+      <section class="dashboard">
+        <!-- dashboard header -->
+        <header class="header">
+          <div class="header__top">
+            <img
+              src="images/image-jeremy.png"
+              alt="Jeremy Robson"
+              class="header__img"
+            />
+            <h2 class="header__heading">
+              <span class="header__heading--small">Report for</span>
+              <span class="header__heading--big">Jeremy Robson</span>
+            </h2>
+          </div>
+          <div class="header__tabs">
+            <ul class="header__tabs-list">
+              <li>
+                <button class="header__tab" data-tab="daily">Daily</button>
+              </li>
+              <li>
+                <button class="header__tab" data-tab="weekly">Weekly</button>
+              </li>
+              <li>
+                <button class="header__tab" data-tab="monthly">Monthly</button>
+              </li>
+            </ul>
+          </div>
+        </header>
+        <!-- /dashboard header -->
+
+        <div class="card card--work">
+          <h3 class="card__title">Work</h3>
+          <img
+            src="images/icon-ellipsis.svg"
+            alt="ellipsis"
+            class="card__ellipsis"
+          />
+          <p class="card__big-text">30hrs</p>
+          <p class="card__small-text">Last Week - 25hrs</p>
+        </div>
+
+        <div class="card card--play">
+          <h3 class="card__title">Play</h3>
+          <img
+            src="images/icon-ellipsis.svg"
+            alt="ellipsis"
+            class="card__ellipsis"
+          />
+          <p class="card__big-text">30hrs</p>
+          <p class="card__small-text">Last Week - 25hrs</p>
+        </div>
+
+        <div class="card card--study">
+          <h3 class="card__title">Study</h3>
+          <img
+            src="images/icon-ellipsis.svg"
+            alt="ellipsis"
+            class="card__ellipsis"
+          />
+          <p class="card__big-text">30hrs</p>
+          <p class="card__small-text">Last Week - 25hrs</p>
+        </div>
+
+        <div class="card card--exercise">
+          <h3 class="card__title">Exercise</h3>
+          <img
+            src="images/icon-ellipsis.svg"
+            alt="ellipsis"
+            class="card__ellipsis"
+          />
+          <p class="card__big-text">30hrs</p>
+          <p class="card__small-text">Last Week - 25hrs</p>
+        </div>
+
+        <div class="card card--social">
+          <h3 class="card__title">Social</h3>
+          <img
+            src="images/icon-ellipsis.svg"
+            alt="ellipsis"
+            class="card__ellipsis"
+          />
+          <p class="card__big-text">30hrs</p>
+          <p class="card__small-text">Last Week - 25hrs</p>
+        </div>
+
+        <div class="card card--self-care">
+          <h3 class="card__title">Self Care</h3>
+          <img
+            src="images/icon-ellipsis.svg"
+            alt="ellipsis"
+            class="card__ellipsis"
+          />
+          <p class="card__big-text">30hrs</p>
+          <p class="card__small-text">Last Week - 25hrs</p>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
