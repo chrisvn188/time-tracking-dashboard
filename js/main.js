@@ -14,7 +14,7 @@ function loadContent(tab) {
     const cardBigText = card.querySelector('.card__big-text');
     const cardSmallText = card.querySelector('.card__small-text');
 
-    getData('/data.json').then(data => {
+    getData('data.json').then(data => {
       const currentTime = data[index].timeframes[tab.dataset.tab].current;
       const previousTime = data[index].timeframes[tab.dataset.tab].previous;
 
