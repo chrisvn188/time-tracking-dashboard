@@ -1,6 +1,3 @@
-const dashboard = document.querySelector('.dashboard');
-const cards = document.querySelectorAll('.card');
-
 async function getData(url) {
   const response = await fetch(url);
   if (!response.ok) {
@@ -10,19 +7,8 @@ async function getData(url) {
   return await response.json();
 }
 
-const tabs = document.querySelectorAll('.header__tab');
-tabs.forEach(tab =>
-  tab.addEventListener('click', e => {
-    // remove all active tab
-    tabs.forEach(tab => tab.classList.remove('active'));
-
-    // set active tab when tab clicked, then load content of the tab
-    tab.classList.add('active');
-    loadContent(tab);
-  })
-);
-
 // load content based on current active tab
+const cards = document.querySelectorAll('.card');
 function loadContent(tab) {
   cards.forEach((card, index) => {
     const cardBigText = card.querySelector('.card__big-text');
@@ -48,6 +34,18 @@ function loadContent(tab) {
     });
   });
 }
+
+const tabs = document.querySelectorAll('.header__tab');
+tabs.forEach(tab =>
+  tab.addEventListener('click', e => {
+    // remove all active tab
+    tabs.forEach(tab => tab.classList.remove('active'));
+
+    // set active tab when tab clicked, then load content of the tab
+    tab.classList.add('active');
+    loadContent(tab);
+  })
+);
 
 // load default content when DOM loaded
 const weeklyTab = document.querySelector('[data-tab="weekly"]');
